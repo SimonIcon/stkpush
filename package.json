@@ -1,0 +1,23 @@
+{
+  "name": "stkpush",
+  "version": "1.0.0",
+  "description": "stkpush demo",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node index.js"
+  },
+  "author": "symohdev",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ngrok": "^5.0.0-beta.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

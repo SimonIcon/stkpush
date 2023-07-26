@@ -1,0 +1,146 @@
+.container {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    position: fixed;
+}
+
+.header-container {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(65, 64, 64);
+    color: white;
+    padding-right: -50px;
+}
+
+.left-header {
+    margin-left: 50px;
+}
+
+.left-header>h3 {
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.left-header>p {
+    font-family: monospace;
+    font-style: italic;
+}
+
+.right-header {
+    margin-right: 50px;
+}
+
+.right-header>h4 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.footer-container {
+    background-color: rgb(65, 64, 64);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: start;
+    padding-bottom: 10px;
+}
+
+.body-container {
+    height: 70%;
+}
+
+.contact-me {
+    font-size: xx-large;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.label {
+    text-transform: capitalize;
+    font-size: small;
+    font-weight: 800;
+}
+
+.value {
+    text-transform: lowercase;
+    font-size: small;
+    margin-left: 20px;
+}
+
+.holder-container {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-container>h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.input-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.button {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px black solid;
+    background-color: rgb(100, 190, 226);
+    font-weight: 800;
+    color: black;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: larger;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: rgb(207, 243, 243);
+}
