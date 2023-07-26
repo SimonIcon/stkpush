@@ -30,7 +30,7 @@ stkRoute.post('/', getToken, async (req, res) => {
         "PartyA": `254${phone}`,
         "PartyB": 174379,
         "PhoneNumber": `254${phone}`,
-        "CallBackURL": `https://mydomain.com/${process.env.CALLBACK}`,
+        "CallBackURL": `https://symohdev-stkpush.onrender.com/${process.env.CALLBACK}`,
         "AccountReference": `254${phone}`,
         "TransactionDesc": "testing"
     }
@@ -49,6 +49,7 @@ stkRoute.post('/', getToken, async (req, res) => {
 })
 stkRoute.post(`/${process.env.CALLBACK}`, (req, res) => {
     const callbackData = req.body;
+    console.log(callbackData)
 })
 
 module.exports = { stkRoute }
