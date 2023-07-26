@@ -49,7 +49,13 @@ stkRoute.post('/', getToken, async (req, res) => {
 })
 stkRoute.post(`/${process.env.CALLBACK}`, (req, res) => {
     const callbackData = req.body;
-    console.log(callbackData)
+    if (!callbackData.Body.stkCallback.callbackMetadata) {
+        console.log(callbackData.Body)
+        return res.json('ok')
+    } else {
+        console.log(callbackData.Body.stkCallback.callbackMetadata)
+    }
+
 })
 
 module.exports = { stkRoute }
