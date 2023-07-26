@@ -47,7 +47,8 @@ stkRoute.post('/', getToken, async (req, res) => {
         })
 
 })
-stkRoute.post(`/${process.env.CALLBACK}`, (req, res) => {
+
+stkRoute.post("/callback", (req, res) => {
     const callbackData = req.body;
     if (!callbackData.Body.stkCallback.callbackMetadata) {
         console.log(callbackData.Body)
