@@ -3,7 +3,8 @@ const dotenv = require('dotenv')
 const { stkRoute } = require('./src/routes/stkpush')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const ngrok = require('ngrok')
+const connectDb = require('./src/config/connectDb')
+
 
 
 
@@ -26,6 +27,10 @@ app.get('/', (req, res) => {
 app.use('/', stkRoute)
 
 // starting the server
-app.listen(process.env.PORT, () => {
-    console.log(`server started at port ${process.env.PORT} nicely`)
+connectDb().then(() => {
+    app.listen(process.env.PORT, () => {
+        console.log(`server started at port ${process.env.PORT} nicely and connected to mongoose database`)
+    })
+}).catch((err) => {
+    console.log(`error while connecting to the database ${err}`)
 })
